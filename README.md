@@ -1,6 +1,11 @@
 # TaskFlow
 TaskFlow is a streamlined and efficient Todo List application designed to help users manage their tasks with ease.
 
+## Features
+
+- **Task Management:** Create, and delete tasks effortlessly.
+- **Authentication:** Authenticate with JWT.
+
 ## Stack
 
 - Golang(gin) for backend
