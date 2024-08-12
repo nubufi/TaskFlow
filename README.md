@@ -1,7 +1,13 @@
 # TaskFlow
 TaskFlow is a streamlined and efficient Todo List application designed to help users manage their tasks with ease.
 
-## Installation
+## Stack
+
+- Golang(gin) for backend
+- PostgreSql + Gorm for database
+- Htmx + TailwindCss for frontend
+
+## Getting Started
 
 ### Prerequisites
 
