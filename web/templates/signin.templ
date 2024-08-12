@@ -1,0 +1,26 @@
+package templates
+
+templ SignIn() {
+	<div class="w-full max-w-sm bg-white shadow-lg rounded-lg p-8">
+		<h2 class="text-2xl font-semibold text-center mb-6">Login to Your Account</h2>
+		<form hx-post="/signin" hx-target="#login-response" hx-swap="innerHTML">
+			<div class="mb-4">
+				<label class="block text-gray-700 text-sm font-bold mb-2" for="username">Username</label>
+				<input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring focus:ring-blue-500" id="username" name="username" type="text" placeholder="Enter your username" required/>
+			</div>
+			<div class="mb-6">
+				<label class="block text-gray-700 text-sm font-bold mb-2" for="password">Password</label>
+				<input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring focus:ring-blue-500" id="password" name="password" type="password" placeholder="Enter your password" required/>
+			</div>
+			<div class="flex items-center justify-between">
+				<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+					Login
+				</button>
+				<a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="/signup">
+					Register
+				</a>
+			</div>
+		</form>
+		<div id="login-response" class="mt-4 text-center text-red-500"></div>
+	</div>
+}

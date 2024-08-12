@@ -1,0 +1,30 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: golang_app
+    ports:
+      - "8000:8000"  # Map the app's port to your host, adjust as needed
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgres://user:password@db:5432/taskflow?sslmode=disable
+      SECRET_KEY: dad4a5d2ad6a54d3a2d1a3
+    volumes:
+      - .:/app
+      - /app/tmp
+  db:
+    image: postgres:15-alpine
+    container_name: postgres
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: taskflow
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  pgdata:
