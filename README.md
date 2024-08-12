@@ -22,7 +22,7 @@ TaskFlow is a streamlined and efficient Todo List application designed to help u
    git clone https://github.com/nubufi/TaskFlow.git
    cd TaskFlow
    ```
-2. Build and run docker-compose file
+2. Build and run docker-compose file:
   ```bash
   docker-compose up -- build
   ```
